@@ -97,8 +97,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 ## <a name="links">🔗 Assets</a>
 
 Assets used in the project can be found [here](https://drive.google.com/file/d/1ZmtiMilUYTp1wkiXWMFX6AUk-msE981-/view?usp=sharing)
-
-
-<a href="https://www.jsmastery.pro/ultimate-next-course" target="_blank">
-<img src="https://i.ibb.co/804sPK6/Image-720.png" alt="Project Banner">
-</a>
