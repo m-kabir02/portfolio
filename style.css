@@ -1,0 +1,107 @@
+:root {
+    --primary: #4f46e5;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --text: #334155;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header {
+    background-color: var(--dark);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 { font-size: 2.5rem; letter-spacing: -1px; }
+header h2 { font-weight: 300; color: #94a3b8; }
+
+.contact-info a {
+    color: #818cf8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--dark);
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+}
+
+/* Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-content { padding: 1.5rem; }
+
+.tag {
+    background: #eef2ff;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+}
+
+.card h4 { margin: 1rem 0 0.5rem; color: var(--dark); }
+
+.card p { font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem; }
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.placeholder {
+    border: 2px dashed #cbd5e1;
+    background: transparent;
+    box-shadow: none;
+    opacity: 0.6;
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
