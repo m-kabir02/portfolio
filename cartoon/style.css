@@ -1,6 +1,8 @@
-h1, p {
-    position: relative; 
-    z-index: 10;        
+p{
+    position: absolute;
+    top: 120px;  /* Moves it down from the top to the "top middle" area */
+    left: 30px; /* Aligned 30px from the left */
+    z-index: 10; /* Ensures it stays above the canvas */
 }
 
 #canvas1 {
