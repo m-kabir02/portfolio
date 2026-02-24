@@ -3,19 +3,25 @@
 
 ---
 
+## 🔗 Quick Links
+* 🌐 **Live Site:** [m-kabir02.github.io/portfolio](https://m-kabir02.github.io/portfolio/)
+* 🖥️ **Source Code:** [github.com/m-kabir02/portfolio](https://github.com/m-kabir02/portfolio)
+
+---
+
 ## 📁 Project Gallery
 | Assignment | Project Name | Tech Stack | Live Demo |
 | :--- | :--- | :--- | :--- |
-| **01** | [Interactive Canvas Home](#assignment-1-interactive-canvas-home) | Canvas API, JS, CSS | [View Live](https://github.com/m-kabir02/portfolio/cartoon/index.html) |
+| **01** | [Interactive Canvas Home](#assignment-1) | Canvas API, JS, CSS | [View Live](https://m-kabir02.github.io/portfolio/cartoon/index.html) |
 | **02** | *Coming Soon* | — | — |
 
 ---
 
 ## 🚀 Assignment 1: Interactive Canvas Home
-A creative coding project built with the HTML5 Canvas API, featuring a hand-drawn house scene with an interactive "grass-growing" mechanic.
+<a id="assignment-1"></a>
 
 ### 🖼️ Preview
-![3610 A1](https://github.com/user-attachments/assets/b2289826-9f25-4933-adb0-39b2f82838a5)
+![3610 A1](https://github.com/user-attachments/assets/02853c83-b444-4ce6-8276-4799dbde7325)
 
 
 ### 🌟 Key Features
