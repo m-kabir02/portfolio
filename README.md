@@ -38,6 +38,7 @@
 <a id="assignment-2"></a>
 
 ### 📕 Preview
+https://github.com/user-attachments/assets/fd22eb00-7273-4ba9-84c6-fa15f283a106
 
 
 ### 📖 Project Overview
