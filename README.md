@@ -13,7 +13,7 @@
 | Assignment | Project Name | Tech Stack | Live Demo |
 | :--- | :--- | :--- | :--- |
 | **01** | [Interactive Canvas Home](#assignment-1) | Canvas API, JS, CSS | [View Live](https://m-kabir02.github.io/portfolio/cartoon/index.html) |
-| **02** | *Coming Soon* | — | — |
+| **02** | [Multimedia Dictionary](#assignment-2) | Web Speech API, HTML5, JS | [View Live](https://m-kabir02.github.io/portfolio/multimedia-dictionary/index.html) |
 
 ---
 
@@ -34,14 +34,31 @@
 * **JavaScript (ES6):** Logic, event listeners, and randomization.
 * **CSS3:** Positioning and UI layering.
 
-### 📝 Learning Outcomes
-* Mastered coordinate system translations and rotations.
-* Implemented linear gradients for realistic textures.
-* Managed the Canvas state stack to prevent global style leakage.
+## 🔊 Assignment 2: The Multimedia Dictionary
+<a id="assignment-2"></a>
+
+### 📕 Preview
+
+
+### 📖 Project Overview
+The objective of this project is to develop a Multimedia Dictionary application that assists early learners in word-to-sound recognition. It functions as a dynamic interface that stores produce-related words and descriptive sentences within an HTML structure.
+
+### 🌟 Key Features
+* **Web Speech Synthesis:** Utilizes the Web Speech API to synthesize text into audible speech.
+* **Data Flow Logic:** Uses the JavaScript `dataset` property to retrieve "hidden" descriptive sentences stored in HTML `data-sentence` attributes.
+* **The Gatekeeper:** Implements validation logic to ensure the application only runs when the `selectedIndex` is greater than 0.
+* **Dual Interaction:** The interface includes a dropdown menu with a "Speak Word" button and a read-only textarea with a "Speak Sentence" button.
+
+### 🛠️ Technologies
+* **Web Speech API:** Acts as the Multimedia Engine for the application.
+* **HTML5 data-* Attributes:** Used as a mini-database to store extra information without affecting layout.
+* **JavaScript (DOM Manipulation):** Emplements the Drill-Down technique to grab specific items from the options collection.
 
 ---
 
 ## 🛠️ Installation & Local Setup
 1. Clone the repository: `git clone https://github.com/m-kabir02/portfolio.git`
-2. Navigate to the desired project folder: `cd cartoon`
+2. Navigate to the desired project folder: `cd multimedia-dictionary` or `cd cartoon`
 3. Open `index.html` in your browser.
+
+---
