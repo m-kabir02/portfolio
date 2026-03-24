@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fruit & Veggie Dictionary</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 40px; background-color: #f0fdf4; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .section { margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; color: #166534; }
+        select, textarea { padding: 12px; border: 2px solid #bbf7d0; border-radius: 6px; font-size: 16px; }
+        select { flex-grow: 1; }
+        textarea { width: 100%; resize: none; background-color: #f9fafb; color: #374151; }
+        button { padding: 12px 20px; cursor: pointer; background-color: #22c55e; color: white; border: none; border-radius: 6px; font-weight: bold; }
+        button:hover { background-color: #16a34a; }
+        .nav-link { display: block; margin-top: 20px; color: #166534; text-decoration: none; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Produce Dictionary</h1>
+
+    <label>Pick a Fruit or Vegetable:</label>
+    <div class="section">
+        <select id="wordSelect" onchange="syncDictionary()">
+            <option value="">--Select--</option>
+            <option value="Broccoli" data-sentence="A green vegetable that looks like a miniature tree.">Broccoli</option>
+            <option value="Eggplant" data-sentence="A purple, fleshy vegetable often used in Mediterranean cooking.">Eggplant</option>
+            <option value="Mango" data-sentence="A sweet, tropical stone fruit with yellow-orange flesh.">Mango</option>
+            <option value="Pumpkin" data-sentence="A large orange squash often carved during Halloween.">Pumpkin</option>
+            <option value="Spinach" data-sentence="A leafy green vegetable that is very high in iron.">Spinach</option>
+        </select>
+        <button onclick="handleSpeakWord()">Speak Word</button>
+    </div>
+
+    <label>Description:</label>
+    <div class="section">
+        <textarea id="sentenceDisplay" rows="3" readonly placeholder="Choose an item..."></textarea>
+        <button onclick="handleSpeakSentence()">Speak Sentence</button>
+    </div>
+
+    <a href="../index.html" class="nav-link">← Back to Portfolio</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
