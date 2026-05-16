@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .grid-box {
+            background-color: #e0f2fe;
+            border: 2px solid #bae6fd;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            color: #0369a1;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        h1 { color: #0f172a; margin-bottom: 30px; }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+        <h1 class="text-center">Bootstrap Grid System Practice</h1>
+        <p class="text-center text-muted mb-5">Demonstrating responsive column behaviors across different breakpoints.</p>
+
+        <h3 class="h5 mb-3 text-secondary">Row 1: Equal 3 Columns (col-md-4)</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="grid-box">Column 1</div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-box">Column 2</div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-box">Column 3</div>
+            </div>
+        </div>
+
+        <h3 class="h5 mt-4 mb-3 text-secondary">Row 2: Main Content + Sidebar (col-md-8 & col-md-4)</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="grid-box bg-emerald" style="background-color: #dcfce7; color: #15803d; border-color: #bbf7d0;">Main Content Area (8 Cols)</div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-box">Sidebar (4 Cols)</div>
+            </div>
+        </div>
+
+        <h3 class="h5 mt-4 mb-3 text-secondary">Row 3: Highly Responsive Grid (col-12 col-sm-6 col-lg-3)</h3>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="grid-box">Quarter 1</div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="grid-box">Quarter 2</div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="grid-box">Quarter 3</div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="grid-box">Quarter 4</div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="../index.html" class="btn btn-outline-primary">← Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/js/bootstrap.bundle.min.min.js"></script>
+</body>
+</html>

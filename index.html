@@ -6,7 +6,22 @@
     <title>Sadiya Kabir | CISC 3610 Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <style>
+        /* 🎯 RESPONSIVE BUTTON WRAPPING SYSTEM (PREVENTS SQUEEZING ON NARROW SCREENS) */
+        .pwa-btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            width: 100%;
+        }
+        .pwa-btn-container .btn {
+            flex: 1 1 calc(50% - 10px); /* Splits into equal 2x2 grid when space is tight */
+            min-width: 120px;
+            text-align: center;
+            white-space: nowrap;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,11 +32,11 @@
             <div class="contact-info">
                 <a href="mailto:sxdiyak@gmail.com">sxdiyak@gmail.com</a>
             </div>
-             <div class="source-code">
-            <a href="https://github.com/m-kabir02/portfolio" class="btn secondary" target="_blank">
-                🖥️ Source Code
-            </a>
-        </div>
+            <div class="source-code">
+                <a href="https://github.com/m-kabir02/portfolio" class="btn secondary" target="_blank">
+                    🖥️ Source Code
+                </a>
+            </div>
         </div>
     </header>
 
@@ -33,18 +48,71 @@
                 <div class="card">
                     <div class="card-content">
                         <span class="tag">Canvas API</span>
-                        <h4>Assignment 1</h4>
+                        <h4>Cartoon</h4>
                         <p>An interactive cartoon house built using HTML5 Canvas, featuring dynamic grass growth and window transformations.</p>
                         <a href="cartoon/index.html" class="btn">View Project</a>
                     </div>
                 </div>
 
-               <div class="card">
+                <div class="card">
                     <div class="card-content">
                         <span class="tag">Web Speech API</span>
-                        <h4>Assignment 2</h4>
+                        <h4>Word Speak</h4>
                         <p>A Multimedia Dictionary featuring word-to-sound recognition for fruits and vegetables using the Web Speech API.</p>
                         <a href="multimedia-dictionary/index.html" class="btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="tag">Wick Editor</span>
+                        <h4>Wick Animation</h4>
+                        <p>A layered 2D scene built at 30 FPS using motion tweens and a continuous parallax timeline loop.</p>
+                        <a href="wick-animation/index.html" class="btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="tag">Bootstrap 5</span>
+                        <h4>Bootstrap Lab</h4>
+                        <p>A responsive grid layout demonstrating structural column behavior variations across layout break thresholds.</p>
+                        <a href="bootstrap-grid/index.html" class="btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="tag">Bootstrap Components</span>
+                        <h4>Resume Lab</h4>
+                        <p>An interactive professional resume featuring sticky-top section jumps and a dynamic project showcase carousel grid.</p>
+                        <a href="resume-lab/index.html" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <span class="tag">HTML iframe</span>
+                        <h4>YouTube Videos Lab</h4>
+                        <p>Embedding third-party rich media assets using HTML iframe elements inside a structured dashboard.</p>
+                        <a href="youtube-lab/index.html" class="btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="card term-project-card">
+                    <div class="card-content">
+                        <span class="tag">PWA / Capstone</span>
+                        <h4>Term Project: ScribePulse</h4>
+                        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px; font-weight: 600;">Topic Context: Human Body and Health</p>
+                        <p>A mobile-first educational flashcard app built with HTML5, CSS3, JavaScript, and Bootstrap 5. Employs hardware-synthesized whoosh sound effects via Web Audio, Text-to-Speech phonetic dictation, and client-side LocalStorage CRUD persistence.</p>
+                        
+                        <div class="pwa-btn-container">
+                            <a href="pwa/index.html" class="btn" target="_blank">Launch App</a>
+                            <a href="pwa/promo.html" class="btn" style="background-color: #f1f5f9; color: #1e293b; border: 1px solid #e2e8f0;">Promotional Hub</a>
+                            <a href="pwa/user-documentation.txt" target="_blank" class="btn" style="font-size: 0.85rem; background: transparent; color: #64748b; border: 1px dashed #cbd5e1;">Documentation</a>
+                            <a href="pwa/promo.html#developer-manual" class="btn" style="font-size: 0.85rem; background: transparent; color: #64748b; border: 1px dashed #cbd5e1;">Developer Manual</a>
+                            <a href="https://github.com/m-kabir02/portfolio" class="btn secondary" target="_blank">🖥️ Source Code</a>
+                        </div>
                     </div>
                 </div>
 

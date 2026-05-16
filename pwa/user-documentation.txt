@@ -1,0 +1,56 @@
+========================================================================
+SCRIBEPULSE USER DOCUMENTATION & INSTALLATION PROTOCOLS
+========================================================================
+
+1. APP CONCEPT & FEATURE DESCRIPTION
+ScribePulse is a mobile-responsive educational learning deck optimized for Medical Scribes and Healthcare IT students mastering Electronic Health Record (EHR) notation paradigms.
+
+KEY FUNCTIONAL FEATURES:
+- Dynamic Navigation Hub: Seamlessly step through medical definitions using touch-friendly control nodes, the dynamically populated topics dropdown menu, or desktop keyboard layouts.
+- Clinical Audio Dictation: Links into the HTML5 Web Speech Synthesis API. Activating audio reads the title definition followed by a letter-by-letter spelling configuration of the shorthand coding convention.
+- Integrated Audio Transition: Uses the browser-level Web Audio API to synthesize a high-fidelity 'whoosh' sweep sound effect when moving through elements, bypassing heavy offline asset files.
+- Sandbox Storage Engine: Empowers the user to create new custom cards or revise fields on the fly. Adjustments persist safely inside browser memory.
+
+2. DEVICE INSTALLATION STEP-BY-STEP
+ScribePulse uses standard Progressive Web Application architecture, bypassing traditional application storefront channels.
+
+For Desktop Systems (Chrome / Edge):
+1. Navigate to the deployed web server application link.
+2. In the right side of the browser URL target input address line, click the 'Install App' banner icon (or use the button inside the app header).
+3. Confirm the system dialog download prompt. ScribePulse will now pin to your workspace and function flawlessly when disconnected from internet links.
+
+For Mobile Systems (iOS Safari / Android Chrome):
+1. Load the path link inside your standard smartphone web browser engine.
+2. Tap the 'Share' function control icon (iOS) or options drop menu (Android).
+3. Choose the option titled "Add to Home Screen".
+4. Launch the application shortcut icon cleanly right out of your main app grid.
+
+========================================================================
+SCRIBEPULSE SYSTEM PROGRAMMER MANUAL: DATASET ENTRIES MODIFICATION
+========================================================================
+
+ScribePulse is designed with a strict decoupling of the UI render layout layer from the structured dataset storage pipeline. The complete application interface compiles dynamically utilizing data parsing out of a single flat object database.
+
+1. UNDERSTANDING THE SCHEMATIC INTERFACE SPEC (data.json)
+To modify the app to display a completely fresh educational topic (e.g., Space Exploration or Wild Animals), open 'data.json' and append or overwrite your parameters matching this JSON pattern block:
+
+{
+  "appTheme": "Descriptive Heading Title of your Study Module",
+  "vocabulary": [
+    {
+      "id": "term_unique_id_string_tag",
+      "title": "Exact display text title of your topic object",
+      "abbreviation": "Spaced character sequences for explicit pronunciation spelling hooks",
+      "shorthand": "The standard acronym or nickname string shown on the meta lines",
+      "description": "Comprehensive reference text detailing core criteria definitions",
+      "image": "Local asset image file path destination string (leave blank '' for user items)"
+    }
+  ]
+}
+
+2. ADDING A NEW TERM DATA NODE STEP-BY-STEP
+Follow these instructions precisely to expand or replace the default learning topic block:
+
+Step A: Place your custom raster/vector reference images directly into the local asset folder paths (e.g., inside 'pwa/assets/'). Use light web-friendly compression extensions like .jpg, .png, or .avif.
+Step B: Open 'data.json' in any code environment wrapper and inject your new dataset structure element block inside the parent JSON array bracket. Ensure all commas are balanced.
+Step C: If adding a local image file path, open 'service-worker.js' and include the fresh asset text string directly inside the constant 'ASSETS_TO_CACHE' registry block. This guarantees your system successfully caches the new files for completely offline evaluation criteria checks.

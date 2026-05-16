@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadiya Kabir | Professional Resume</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira+Extra+Condensed:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #6c757d;
+            padding-top: 54px;
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Saira Extra Condensed', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #343a40;
+            letter-spacing: 0.05rem;
+        }
+        
+        h1 { font-size: 5.5rem; line-height: 5rem; }
+        h2 { font-size: 3.5rem; border-bottom: 1px solid #dee2e6; padding-bottom: 0.5rem; margin-bottom: 3rem; }
+        h3 { font-size: 2.2rem; }
+
+        .text-primary { color: #bd5d38 !important; }
+        .subheading { text-transform: uppercase; font-weight: 500; font-family: 'Saira Extra Condensed', sans-serif; font-size: 1.4rem; color: #868e96; }
+        .timeline-date { color: #bd5d38; font-weight: 500; font-size: 1.05rem; margin-bottom: 1rem; display: block; }
+
+        /* Social Icon Elements Styling */
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 3.5rem;
+            width: 3.5rem;
+            background-color: #495057;
+            color: #fff;
+            border-radius: 100%;
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            transition: background-color 0.2s ease-in-out;
+            text-decoration: none;
+        }
+        .social-icons a:hover { background-color: #bd5d38; }
+
+        /* Fixed Left Navigation Pane Panel Setup */
+        @media (min-width: 992px) {
+            body { padding-top: 0; padding-left: 17rem; }
+            #sideNav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                width: 17rem;
+                height: 100vh;
+                text-align: center;
+                padding-top: 5rem;
+            }
+            #sideNav .navbar-collapse { display: flex; align-items: flex-start; flex-grow: 0; width: 100%; }
+            #sideNav .navbar-collapse .navbar-nav { flex-direction: column; width: 100%; }
+            #sideNav .navbar-collapse .navbar-nav .nav-item { display: block; width: 100%; }
+        }
+
+        #sideNav { background-color: #bd5d38; border-bottom: none; }
+        #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+            font-weight: 800;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.65);
+            padding: 0.5rem 1rem;
+            letter-spacing: 0.05rem;
+        }
+        #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link.active { color: #fff; }
+
+        section.resume-section {
+            display: flex;
+            align-items: center;
+            padding: 5rem 2rem;
+            max-width: 75rem;
+            border-bottom: 1px solid #dee2e6;
+            min-height: 100vh;
+        }
+
+        /* ⚠️ CRITICAL CAROUSEL LAYOUT SAFETY PATCH ⚠️ */
+        /* Forces unselected items to hide even if the script library is delayed */
+        .carousel-item {
+            display: none;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .carousel-item.active {
+            display: block !important;
+        }
+        .tag { display: inline-block; padding: 4px 12px; background-color: #fcede6; color: #bd5d38; border-radius: 4px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-offset="10">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" id="sideNav">
+        <a class="navbar-brand d-lg-none px-3" href="#about">Sadiya Kabir</a>
+        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link pt-5 text-white-50" style="font-size: 0.85rem;" href="../index.html">← Back Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+        <section class="resume-section" id="about">
+            <div class="w-100">
+                <h1 class="mb-0">Sadiya <span class="text-primary">Kabir</span></h1>
+                <div class="subheading mb-4">
+                    Brooklyn, NY · (631) 568-2064 · <a href="mailto:sxdiyak@gmail.com" class="text-primary text-lowercase">sxdiyak@gmail.com</a>
+                </div>
+                <p class="lead mb-4" style="color: #495057;">
+                    Dynamic Computer Science senior undergraduate student with a passion for building robust, user-friendly applications that solve real-world problems.
+                </p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/m-kabir02" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:sxdiyak@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section" id="experience">
+            <div class="w-100">
+                <h2 class="mb-5">Experience</h2>
+
+                <div class="mb-5">
+                    <h3 class="mb-0">App Development Intern</h3>
+                    <div class="subheading mb-1">NYC Office of Management and Budget (OMB)</div>
+                    <span class="timeline-date">Incoming Summer 2026</span>
+                    <p>Collaborating with internal technological transformation groups to support engineering scaling, core interface layout workflows, and modernization frameworks.</p>
+                </div>
+
+                <div class="mb-5">
+                    <h3 class="mb-0">AI and Automation Extern</h3>
+                    <div class="subheading mb-1">Wayfair - Remote</div>
+                    <span class="timeline-date">Nov 2025 - Jan 2026</span>
+                    <ul class="text-muted">
+                        <li>Developed AI agents and automated dashboards to analyze design trends, monitor competitors, and generate content insights for Wayfair's vendor management team.</li>
+                        <li>Built AI-powered workflows using n8n and Gemini to automate trend discovery and insight generation.</li>
+                        <li>Expanded technical skills in AI agent development, prompt engineering, data scraping, and dashboard design.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-5">
+                    <h3 class="mb-0">AI and Automation Extern</h3>
+                    <div class="subheading mb-1">Outamation - Remote</div>
+                    <span class="timeline-date">May 2025 - Aug 2025</span>
+                    <ul class="text-muted">
+                        <li>Engineered a custom RAG pipeline using LlamaIndex, PyMuPDF, and Mistral 7B to automate document processing workflows.</li>
+                        <li>Implemented a hybrid retrieval system combining Vector and BM25 search with a cross-encoder reranking engine to optimize search accuracy.</li>
+                        <li>Built automated workflows with Python that reduced data processing time by 60% for production systems.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-5">
+                    <h3 class="mb-0">Software Engineer Intern</h3>
+                    <div class="subheading mb-1">Cognizant - Teaneck, New Jersey</div>
+                    <span class="timeline-date">Jan 2024 - Feb 2024</span>
+                    <ul class="text-muted">
+                        <li>Developed a full-stack portal Site for TriZetto Facets and QNXT, enterprise platforms supporting health plan operations, claims, and enrollment.</li>
+                        <li>Engineered custom UI designs and backend logic using Flask/Python with MySQL database integration.</li>
+                        <li>Collaborated in an Agile team of 5 to deliver a production-ready solution, ensuring scalability for core administration modules.</li>
+                        <li>Applied systematic testing methodologies and version control (Git) to maintain high code quality.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="resume-section" id="education">
+            <div class="w-100">
+                <h2 class="mb-5">Education</h2>
+                <div class="mb-5">
+                    <h3 class="mb-0">CUNY Brooklyn College</h3>
+                    <div class="subheading mb-2">Bachelor of Science in Computer Science</div>
+                    <span class="timeline-date">Expected Dec 2026</span>
+                    <p class="mb-1"><strong>Relevant Coursework:</strong> Data Structures and Algorithms | Object-Oriented Programming in Java and Python | Discrete Structures | Calculus I | Calculus II | Computer Architecture.</p>
+                    <p class="text-muted small"><strong>Clubs & Organizations:</strong> Computer Science Club, Rewriting The Code, CodePath Alumni & Mentor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section" id="skills">
+            <div class="w-100">
+                <h2 class="mb-5">Skills</h2>
+                <div class="subheading mb-3">Programming Languages & Tools</div>
+                <p class="lead mb-0" style="font-size: 1.15rem; color: #495057;">
+                    Java (OOD), JavaScript, Python, HTML/CSS, Swift, Git, Xcode, Figma, GSAP, and Three.js.
+                </p>
+            </div>
+        </section>
+
+        <section class="resume-section" id="projects">
+            <div class="w-100">
+                <h2 class="mb-5">Projects</h2>
+                
+                <div id="resumeCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
+                    <div class="carousel-indicators" style="bottom: -40px;">
+                        <button type="button" data-bs-target="#resumeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#resumeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#resumeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    
+                    <div class="carousel-inner shadow-sm">
+                        
+                        <div class="carousel-item active">
+                            <div class="row align-items-center p-4">
+                                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                                    <div class="mx-auto" style="max-width: 450px;">
+                                        <video autoplay loop muted playsinline class="img-fluid rounded border shadow-sm" style="max-height: 240px; width: auto; object-fit: contain;">
+                                            <source src="demo.mov" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 ps-lg-4 text-center text-lg-start">
+                                    <span class="tag">React 18 · Vite · Tailwind CSS</span>
+                                    <h3 class="h4 mb-2">macOS-Inspired Interactive Portfolio</h3>
+                                    <p class="text-muted small">
+                                        A high-performance, interactive professional portfolio simulating a fully functional desktop environment. Showcases advanced technical depth through state-driven window-based UI handling, complex layout animations, and a modular architecture.
+                                    </p>
+                                    <a href="https://m-kabir02.github.io/Professional-Portfolio" class="btn btn-sm btn-outline-dark mt-2" target="_blank">
+                                        <i class="fas fa-desktop"></i> Launch Environment
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row align-items-center p-4">
+                                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                                    <div class="mx-auto" style="max-width: 450px;">
+                                        <video autoplay loop muted playsinline class="img-fluid rounded border shadow-sm" style="max-height: 240px; width: auto; object-fit: contain;">
+                                            <source src="omnie-emmie.mov" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 ps-lg-4 text-center text-lg-start">
+                                    <span class="tag">GenAI · Healthcare IT · Streamlit</span>
+                                    <h3 class="h4 mb-2">Epic Art & Emmie: Innovation Prototype</h3>
+                                    <p class="text-muted small">
+                                        A sophisticated healthcare engineering showcase exploring interoperability resolution. Integrates Ambient Clinical Listening (Art) to scribe audio scripts alongside Intelligent Semantic Data Consolidation (Emmie) to unify data streams across multi-institutional EHR sandboxes.
+                                    </p>
+                                    <a href="https://omnie-emmie.streamlit.app/" class="btn btn-sm btn-outline-dark mt-2" target="_blank">
+                                        <i class="fas fa-notes-medical"></i> View Innovation Live
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row align-items-center p-4">
+                                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                                    <div class="mx-auto" style="max-width: 450px;">
+                                        <img src="chatbot.png" alt="PDF Chatbot Preview" class="img-fluid rounded border shadow-sm" style="max-height: 240px; width: auto; object-fit: contain;">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 ps-lg-4 text-center text-lg-start">
+                                    <span class="tag">Python · LlamaIndex · Streamlit</span>
+                                    <h3 class="h4 mb-2">PDF Q&A ChatBot Layout</h3>
+                                    <p class="text-muted small">
+                                        Developed a conversational AI chatbot interface applying custom retrieval workflows. Features an interactive sidebar file-upload system designed to let users upload document assets seamlessly and receive immediate context-grounded insights via large language model pipelines.
+                                    </p>
+                                    <a href="https://m-kabir02.github.io/AI-CHATBOT/" class="btn btn-sm btn-outline-dark mt-2" target="_blank">
+                                        <i class="fas fa-robot"></i> Open Chatbot
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#resumeCarousel" data-bs-slide="prev" style="width: 5%;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#resumeCarousel" data-bs-slide="next" style="width: 5%;">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Target your specific carousel
+            const carouselEl = document.getElementById('resumeCarousel');
+            
+            // Try to initialize it safely using the Bootstrap framework first
+            let carouselInstance = null;
+            if (typeof bootstrap !== 'undefined') {
+                carouselInstance = new bootstrap.Carousel(carouselEl, {
+                    interval: false,
+                    ride: false
+                });
+            }
+
+            // Fallback: Custom manual navigation if the framework script fails to click
+            const prevBtn = carouselEl.querySelector('.carousel-control-prev');
+            const nextBtn = carouselEl.querySelector('.carousel-control-next');
+            const slides = Array.from(carouselEl.querySelectorAll('.carousel-item'));
+            const indicators = Array.from(carouselEl.querySelectorAll('.carousel-indicators button'));
+
+            function changeSlide(direction) {
+                const activeSlide = carouselEl.querySelector('.carousel-item.active');
+                let activeIndex = slides.indexOf(activeSlide);
+                
+                // Remove active classes
+                slides[activeIndex].classList.remove('active');
+                if(indicators.length) indicators[activeIndex].classList.remove('active');
+
+                // Calculate next index math loop
+                if (direction === 'next') {
+                    activeIndex = (activeIndex + 1) % slides.length;
+                } else {
+                    activeIndex = (activeIndex - 1 + slides.length) % slides.length;
+                }
+
+                // Add active classes to new index position
+                slides[activeIndex].classList.add('active');
+                if(indicators.length) {
+                    indicators[activeIndex].classList.add('active');
+                    indicators[activeIndex].setAttribute('aria-current', 'true');
+                }
+            }
+
+            // Attach pure click actions to the arrows
+            prevBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (carouselInstance) carouselInstance.prev();
+                else changeSlide('prev');
+            });
+
+            nextBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (carouselInstance) carouselInstance.next();
+                else changeSlide('next');
+            });
+            
+            // Attach pure click actions to the bottom dot indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (carouselInstance) {
+                        carouselInstance.to(index);
+                    } else {
+                        const activeSlide = carouselEl.querySelector('.carousel-item.active');
+                        const activeIndex = slides.indexOf(activeSlide);
+                        slides[activeIndex].classList.remove('active');
+                        indicators[activeIndex].classList.remove('active');
+                        
+                        slides[index].classList.add('active');
+                        indicators[index].classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

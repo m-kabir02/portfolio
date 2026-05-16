@@ -1,0 +1,50 @@
+{
+  "appTheme": "Electronic Health Record Vocabulary Builder",
+  "vocabulary": [
+    {
+      "id": "term_1",
+      "cardNumber": "1",
+      "title": "Aortic Stenosis",
+      "abbreviation": "A S",
+      "shorthand": "AS",
+      "description": "A structural narrowing of the aortic valve opening, restricting vital blood outflow from the left ventricle into the systemic aorta.",
+      "image": "assets/AS.jpg"
+    },
+    {
+      "id": "term_2",
+      "cardNumber": "2",
+      "title": "Bradycardia",
+      "abbreviation": "B R A D Y",
+      "shorthand": "Brady",
+      "description": "An abnormally slow resting heart rate condition, typically documented when parameters fall below 60 beats per minute in adult charts.",
+      "image": "assets/brady.jpg"
+    },
+    {
+      "id": "term_3",
+      "cardNumber": "3",
+      "title": "Dyspnea",
+      "abbreviation": "S O B",
+      "shorthand": "SOB",
+      "description": "Subjective distressful sensation of labored or uncomfortable breathing, routinely charting as Shortness of Breath during intake triage.",
+      "image": "assets/SOB.jpg"
+    },
+    {
+      "id": "term_4",
+      "cardNumber": "4",
+      "title": "Gastroesophageal Reflux",
+      "abbreviation": "G E R D",
+      "shorthand": "GERD",
+      "description": "A persistent chronic digestive disorder where highly acidic gastric contents regurgitate backwards into the esophageal path.",
+      "image": "assets/GERD.jpg"
+    },
+    {
+      "id": "term_5",
+      "cardNumber": "5",
+      "title": "Hypertension",
+      "abbreviation": "H T N",
+      "shorthand": "HTN",
+      "description": "A major systemic circulatory cardiovascular condition marked by a chronic elevation of arterial pressure forces above 130/80 mmHg.",
+      "image": "assets/HTN.avif"
+    }
+  ]
+}

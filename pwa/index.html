@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScribePulse | EHR Flashcard Deck</title>
+    <link class="manifest-route" rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a3a3a">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #1a3c3c; 
+            font-family: system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .app-header { 
+            padding: 20px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .app-logo-text { color: rgba(255, 255, 255, 0.9); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: 1.1rem; text-decoration: none; }
+        .app-logo-text img { height: 28px; margin-right: 8px; }
+
+        .header-actions-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* 🎯 STRICT WHITE STYLING FOR THE PORTFOLIO NAVIGATION LINK BUTTON */
+        .btn-portfolio-nav {
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.4) !important;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .btn-portfolio-nav:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff !important;
+            color: #ffffff !important;
+        }
+
+        .workspace-container { 
+            flex-grow: 1; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 10px 20px 30px 20px; 
+            gap: 20px; 
+        }
+        
+        /* 🎯 PERFECTLY CENTERED DROPDOWN WRAPPER ENGINE */
+        .menu-dropdown-wrapper {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            justify-content: center; /* Forces total center alignment */
+        }
+        .form-select-scribe {
+            background-color: #244a4a !important;
+            color: #ffffff !important;
+            border: 2px solid #2d5a5a !important;
+            border-radius: 12px !important;
+            padding: 12px 40px 12px 20px !important;
+            font-size: 0.95rem !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.02em;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 20px center !important;
+            background-size: 14px calc(100% - 20px) !important;
+            appearance: none !important;
+            transition: all 0.2s ease;
+            width: 100%; /* Fully matches card container width proportions */
+        }
+        .form-select-scribe:focus {
+            border-color: #1abc9c !important;
+            box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.25) !important;
+            outline: none;
+        }
+        .form-select-scribe option {
+            background-color: #1a3c3c;
+            color: #ffffff;
+            padding: 10px;
+        }
+
+        .flashcard-card {
+            background-color: #1abc9c; 
+            color: #ffffff;
+            width: 100%;
+            max-width: 480px;
+            min-height: 540px;
+            border-radius: 24px;
+            border: none;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            padding: 30px 25px 40px 25px;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            position: relative;
+        }
+
+        .card-action-bar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        .card-action-btn {
+            background: rgba(0, 0, 0, 0.15);
+            border: none;
+            color: #ffffff;
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .card-action-btn:hover {
+            background: #ffffff;
+            transform: scale(1.1);
+        }
+        .btn-delete-card:hover { color: #dc3545; }
+        .btn-edit-card:hover { color: #ffc107; }
+
+        .card-content-stack {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .anatomy-frame {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            padding: 12px;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .anatomy-frame img { 
+            max-height: 100%; 
+            max-width: 100%; 
+            object-fit: contain; 
+            border-radius: 8px;
+            display: block;
+        }
+        
+        .card-meta-count { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; display: block; margin-bottom: 12px; text-align: center; width: 100%; }
+        .card-title-main { font-size: 2.3rem; font-weight: 800; line-height: 1.2; margin-bottom: 15px; text-align: center; width: 100%; }
+        .card-desc-text { font-size: 1.05rem; line-height: 1.6; opacity: 0.95; text-align: center; width: 100%; }
+
+        .deck-controls { display: flex; align-items: center; justify-content: center; gap: 20px; width: 100%; margin-top: auto; }
+        .nav-arrow-btn { width: 50px; height: 50px; border-radius: 100%; background-color: rgba(255, 255, 255, 0.2); color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; transition: all 0.2s; font-size: 1.1rem; }
+        .nav-arrow-btn:hover { background-color: #ffffff; color: #1abc9c; transform: scale(1.05); }
+        .audio-trigger-btn { background-color: #ffffff; color: #1a3c3c; border: none; padding: 12px 32px; border-radius: 30px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.2s; }
+        .audio-trigger-btn:hover { transform: translateY(-2px); background-color: #fafafa; }
+
+        .creator-dashboard { background-color: #244a4a; border: 1px solid #2d5a5a; border-radius: 20px; width: 100%; max-width: 480px; padding: 25px; color: #e2e8f0; }
+        .form-control-dark { background-color: #1e3e3e; border: 1px solid #366b6b; color: #ffffff; }
+        .form-control-dark:focus { background-color: #1a3535; border-color: #1abc9c; color: #ffffff; box-shadow: none; }
+        .form-label-custom { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #a0aec0; }
+
+        .bottom-caption { text-align: center; color: rgba(255, 255, 255, 0.3); font-size: 0.85rem; padding-bottom: 25px; }
+    </style>
+</head>
+<body>
+
+    <header class="app-header">
+        <a href="#" class="app-logo-text">
+            <img src="logo.png" alt="ScribePulse Logo"> ScribePulse
+        </a>
+        <div class="header-actions-group">
+            <a href="../index.html" class="btn btn-sm btn-portfolio-nav px-3 py-1.5">
+                <i class="fas fa-arrow-left me-1 small"></i> Portfolio Home
+            </a>
+            <button id="installPWA" class="btn btn-outline-light btn-sm fw-bold px-3 py-1.5 d-none" style="border-radius: 8px;">Install App</button>
+        </div>
+    </header>
+
+    <main class="workspace-container">
+        
+        <div class="menu-dropdown-wrapper">
+            <select id="vocabMenu" class="form-select form-select-scribe shadow-sm">
+                </select>
+        </div>
+
+        <div id="contentDisplayCard" class="card flashcard-card">
+            
+            <div id="cardActionBar" class="card-action-bar d-none">
+                <button id="editCardBtn" class="card-action-btn btn-edit-card" title="Edit This Flashcard">
+                    <i class="fas fa-pen"></i>
+                </button>
+                <button id="deleteCardBtn" class="card-action-btn btn-delete-card" title="Delete This Flashcard">
+                    <i class="fas fa-trash-can"></i>
+                </button>
+            </div>
+
+            <div class="card-content-stack">
+                <div id="anatomyFrame" class="anatomy-frame">
+                    <img id="cardImage" src="" alt="EHR Anatomy Graph">
+                </div>
+                <span id="cardShorthand" class="card-meta-count">Loading Card...</span>
+                <h2 id="cardTitle" class="card-title-main">ScribePulse</h2>
+                <p id="cardDescription" class="card-desc-text">Syncing dataset assets...</p>
+            </div>
+
+            <div class="deck-controls">
+                <button id="prevCardBtn" class="nav-arrow-btn" title="Previous Card (Left Arrow)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="playAudioBtn" class="audio-trigger-btn">
+                    <i class="fas fa-volume-up me-2"></i> Listen Dictation
+                </button>
+                <button id="nextCardBtn" class="nav-arrow-btn" title="Next Card (Right Arrow / Space)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+        </div>
+
+        <div class="card creator-dashboard shadow">
+            <h5 id="formPanelTitle" class="fw-bold text-white mb-3"><i class="fas fa-plus-circle me-2 text-info"></i> Create Custom Flashcard</h5>
+            
+            <form id="customCardForm">
+                <div class="row g-2">
+                    <div class="col-sm-6 mb-2">
+                        <label class="form-label form-label-custom">Medical Term Name</label>
+                        <input type="text" id="inputTitle" class="form-control form-control-dark form-control-sm" required placeholder="e.g., Tachycardia">
+                    </div>
+                    <div class="col-sm-6 mb-2">
+                        <label class="form-label form-label-custom">EHR Abbreviation</label>
+                        <input type="text" id="inputShorthand" class="form-control form-control-dark form-control-sm" required placeholder="e.g., tachy">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label form-label-custom">Clinical Definition / Description</label>
+                    <textarea id="inputDesc" class="form-control form-control-dark form-control-sm" rows="2" required placeholder="Describe the diagnostic or baseline tracking mechanics..."></textarea>
+                </div>
+                <button type="submit" id="submitFormBtn" class="btn btn-info btn-sm w-100 fw-bold text-white shadow-sm">
+                    💾 Add Card to Dataset Deck
+                </button>
+                <button type="button" id="cancelEditBtn" class="btn btn-sm btn-secondary w-100 fw-bold mt-2 d-none">
+                    Cancel Editing
+                </button>
+            </form>
+        </div>
+
+    </main>
+
+    <div class="bottom-caption">
+        <i class="fas fa-keyboard me-1"></i> <strong>Keyboard Shortcuts:</strong> Use <strong>Left/Right Arrows</strong> or <strong>Spacebar</strong> to navigate terms smoothly.
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

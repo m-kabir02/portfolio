@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Videos Lab | Sadiya Kabir</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .video-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .video-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Responsive iframe wrapper preservation */
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-info h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #1e1b4b;
+        }
+
+        .video-info p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <h1>YouTube Video Integration Lab</h1>
+        <p><strong>CISC 3610 Assignment</strong> — Embedding third-party rich media assets using HTML <code>&lt;iframe&gt;</code> elements inside a structured dashboard.</p>
+
+        <div class="video-grid">
+
+            <div class="video-card">
+                <div class="iframe-wrapper">
+                    <iframe src="https://www.youtube.com/embed/9CU1EX3R-OQ?si=4eLvloPtUzfdVHYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Wick Editor Interface Exploration</h3>
+                    <p>An entry-level overview guiding users through the core timeline setup tools, canvas inspectors, and manipulation configurations within the open-source web environment.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="iframe-wrapper">
+                    <iframe src="https://www.youtube.com/embed/MDooPrV-zUI?si=m85rAIF2MXFHp79R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>2D Parallax Design Mechanics</h3>
+                    <p>A comprehensive technical deep dive detailing layout isolation speed metrics. Focuses on organizing spatial frames across background, middle, and foreground bounds to yield depth.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="iframe-wrapper">
+                    <iframe src="https://www.youtube.com/embed/cZj0j7rCcek?si=3USR_e5siRN5iVbH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Character Interactivity Loops</h3>
+                    <p>An advanced exploration outlining asset configuration parameters. Highlights framing interpolation controls and sequence handling rules inside continuous vector timelines.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+</body>
+</html>
