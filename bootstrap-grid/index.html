@@ -3,72 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Grid Practice</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap Grid Practice Examples</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
     <style>
-        .grid-box {
-            background-color: #e0f2fe;
-            border: 2px solid #bae6fd;
-            padding: 20px;
-            text-align: center;
-            font-weight: 600;
-            color: #0369a1;
-            border-radius: 6px;
-            margin-bottom: 15px;
+        body {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            background-color: #fff;
+            color: #212529;
         }
-        h1 { color: #0f172a; margin-bottom: 30px; }
+        h1 {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Official Docs-like styling for grid rows and columns */
+        .themed-grid-col {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            background-color: rgba(86, 61, 124, .15);
+            border: 1px solid rgba(86, 61, 124, .2);
+        }
+        .themed-container {
+            padding: .75rem;
+            margin-bottom: 1.5rem;
+            background-color: rgba(0, 123, 255, .15);
+            border: 1px solid rgba(0, 123, 255, .2);
+        }
+        .row {
+            margin-bottom: 1rem;
+        }
+        /* Custom row height for demonstrating vertical alignment */
+        .demo-align-row {
+            min-height: 10rem;
+            background-color: rgba(255, 0, 0, 0.05);
+        }
     </style>
 </head>
-<body class="bg-light">
+<body>
 
-    <div class="container my-5">
-        <h1 class="text-center">Bootstrap Grid System Practice</h1>
-        <p class="text-center text-muted mb-5">Demonstrating responsive column behaviors across different breakpoints.</p>
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1>Grid System Practice Examples</h1>
+            <p class="lead">Interactive practice layouts based entirely on the official Bootstrap Grid documentation.</p>
+        </div>
 
-        <h3 class="h5 mb-3 text-secondary">Row 1: Equal 3 Columns (col-md-4)</h3>
+        <h2>Equal-width</h2>
+        <p>For example, here are two grid layouts that apply to every device and viewport, from <code>xs</code> to <code>xl</code>.</p>
+        
         <div class="row">
-            <div class="col-md-4">
-                <div class="grid-box">Column 1</div>
-            </div>
-            <div class="col-md-4">
-                <div class="grid-box">Column 2</div>
-            </div>
-            <div class="col-md-4">
-                <div class="grid-box">Column 3</div>
-            </div>
+            <div class="col themed-grid-col">1 of 2</div>
+            <div class="col themed-grid-col">2 of 2</div>
         </div>
-
-        <h3 class="h5 mt-4 mb-3 text-secondary">Row 2: Main Content + Sidebar (col-md-8 & col-md-4)</h3>
         <div class="row">
-            <div class="col-md-8">
-                <div class="grid-box bg-emerald" style="background-color: #dcfce7; color: #15803d; border-color: #bbf7d0;">Main Content Area (8 Cols)</div>
-            </div>
-            <div class="col-md-4">
-                <div class="grid-box">Sidebar (4 Cols)</div>
-            </div>
+            <div class="col themed-grid-col">1 of 3</div>
+            <div class="col themed-grid-col">2 of 3</div>
+            <div class="col themed-grid-col">3 of 3</div>
         </div>
 
-        <h3 class="h5 mt-4 mb-3 text-secondary">Row 3: Highly Responsive Grid (col-12 col-sm-6 col-lg-3)</h3>
+
+        <h2>Setting one column width</h2>
+        <p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it.</p>
+        
         <div class="row">
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="grid-box">Quarter 1</div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="grid-box">Quarter 2</div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="grid-box">Quarter 3</div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="grid-box">Quarter 4</div>
-            </div>
+            <div class="col themed-grid-col">1 of 3</div>
+            <div class="col-6 themed-grid-col">2 of 3 (Wider / .col-6)</div>
+            <div class="col themed-grid-col">3 of 3</div>
+        </div>
+        <div class="row">
+            <div class="col themed-grid-col">1 of 3</div>
+            <div class="col-5 themed-grid-col">2 of 3 (Wider / .col-5)</div>
+            <div class="col themed-grid-col">3 of 3</div>
         </div>
 
-        <div class="text-center mt-5">
-            <a href="../index.html" class="btn btn-outline-primary">← Back to Portfolio</a>
+
+        <h2>Variable width content</h2>
+        <p>Use <code>col-{breakpoint}-auto</code> classes to size columns based on the natural width of their content.</p>
+        
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-2 themed-grid-col">1 of 3</div>
+            <div class="col-md-auto themed-grid-col">Variable width content</div>
+            <div class="col col-lg-2 themed-grid-col">3 of 3</div>
         </div>
+        <div class="row">
+            <div class="col themed-grid-col">1 of 3</div>
+            <div class="col-md-auto themed-grid-col">Variable width content</div>
+            <div class="col col-lg-2 themed-grid-col">3 of 3</div>
+        </div>
+
+
+        <h2>Responsive classes</h2>
+        <p>Bootstrap’s grid includes five tiers of predefined classes for building complex responsive layouts.</p>
+        
+        <h3>All breakouts (Stack to horizontal)</h3>
+        <p>Using a single set of <code>.col-sm-*</code> classes, you can create a basic grid system that starts stacked on extra small devices before becoming horizontal on desktop (small) devices.</p>
+        <div class="row">
+            <div class="col-sm-8 themed-grid-col">col-sm-8</div>
+            <div class="col-sm-4 themed-grid-col">col-sm-4</div>
+        </div>
+        <div class="row">
+            <div class="col-sm themed-grid-col">col-sm</div>
+            <div class="col-sm themed-grid-col">col-sm</div>
+            <div class="col-sm themed-grid-col">col-sm</div>
+        </div>
+
+        <h3>Mix and match</h3>
+        <p>Don’t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed.</p>
+        <div class="row">
+            <div class="col-sm-8 col-md-8 themed-grid-col">.col-sm-8 .col-md-8</div>
+            <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
+            <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
+            <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
+        </div>
+
+
+        <h2>Alignment</h2>
+        <p>Use flexbox alignment utilities to vertically and horizontally align columns.</p>
+        
+        <h3>Vertical Alignment</h3>
+        <div class="row align-items-start demo-align-row border mb-3">
+            <div class="col themed-grid-col">Top aligned col</div>
+            <div class="col themed-grid-col">Top aligned col</div>
+        </div>
+        <div class="row align-items-center demo-align-row border mb-3">
+            <div class="col themed-grid-col">Center aligned col</div>
+            <div class="col themed-grid-col">Center aligned col</div>
+        </div>
+        <div class="row align-items-end demo-align-row border mb-3">
+            <div class="col themed-grid-col">Bottom aligned col</div>
+            <div class="col themed-grid-col">Bottom aligned col</div>
+        </div>
+
+        <h3>Horizontal Alignment</h3>
+        <div class="row justify-content-start">
+            <div class="col-4 themed-grid-col">One of two (Start)</div>
+            <div class="col-4 themed-grid-col">Two of two (Start)</div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 themed-grid-col">One of two (Center)</div>
+            <div class="col-4 themed-grid-col">Two of two (Center)</div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-4 themed-grid-col">One of two (End)</div>
+            <div class="col-4 themed-grid-col">Two of two (End)</div>
+        </div>
+
+
+        <h2>Reordering</h2>
+        <p>Use <code>.order-</code> classes for controlling the visual order of your content.</p>
+        
+        <div class="row">
+            <div class="col themed-grid-col order-last">First in markup, but ordered LAST</div>
+            <div class="col themed-grid-col">Second in markup, unordered</div>
+            <div class="col themed-grid-col order-first">Third in markup, but ordered FIRST</div>
+        </div>
+
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/js/bootstrap.bundle.min.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
