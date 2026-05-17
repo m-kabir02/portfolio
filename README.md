@@ -83,6 +83,9 @@ A layered 2D scene exploring digital animation vectors, canvas pacing coordinate
 ## 📐 Assignment 4: Bootstrap Responsive Grid
 <a id="assignment-4"></a>
 
+### 📕 Preview
+<img width="650" height="739" alt="Image" src="https://github.com/user-attachments/assets/aa6bce6f-384f-445d-a60f-92a49e88f4b6" />
+
 ### 📖 Project Overview
 A structural web utility layout mapping variable layouts across device size thresholds using modern CSS grid properties.
 
